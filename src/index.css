@@ -24,3 +24,8 @@ form {
     max-height: 200px;
     overflow-y: auto;
   }
+
+.header {
+  display: inline;
+  text-align: center;
+}

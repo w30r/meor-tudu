@@ -1,22 +1,30 @@
-import Kelas from './Kelas.jsx';
-import Todo from './Todo.jsx';
-import Tudu from './Tudu.jsx';
-import React, { Component } from 'react';
-import Mapping from './MapTuApa.jsx';
+import React, { Component } from 'react'
+import WasepHeader from './WasepHeader'
+import WasepBtn from './WasepBtn'
+import Chatroom from './components/Chatroom'
+import { useState } from 'react'
+
 
 class App extends Component {
-    state = { 
 
-     }
-    render() { 
-        return ( 
-            <div class="box">
-                <center>                    
-                <Tudu />
-                </center>
-            </div>
-         );
+    const [showText, setShowText] = useState(false);
+
+    const handleClick = () => {
+        setShowText(!showText)
     }
+  render() {
+    return (
+      <div>
+        <WasepHeader />
+        <WasepBtn
+          showText={showText}
+          handleClick={handleClick}
+          setShowText={setShowText}
+        />
+        <Chatroom />
+      </div>
+    )
+  }
 }
- 
-export default App;
+
+export default App

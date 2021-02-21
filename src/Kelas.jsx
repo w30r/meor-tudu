@@ -50,7 +50,7 @@ class Kelas extends Component {
                 <img src="https://media.giphy.com/media/xThuWcaa4U4XZQDgvm/giphy.gif"/>
 
                 <form onSubmit={this.submitHandler}>
-                    <h3>Enter your name</h3>
+                    <h2>Enter your name</h2>
                     <input type='text' onChange={this.changeHandler}/>
                     <input type='submit'/>
                 </form>

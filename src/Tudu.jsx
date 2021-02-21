@@ -42,19 +42,20 @@ class Tudu extends Component {
 		 handleSubmit = (ev) => {
 			 ev.preventDefault();
 			 this.setState({ things: [...this.state.things, this.state.newthing]  });
+             this.setState({ newthing: ''});
 		 }
 
 
     render() { 
         return ( 
-            <div class="box"><center>
+            <div><center>
                 
             <h1 class="title">📋 MEOR TUDU APP 📋</h1>
-            <h4 class="subtitle">You have {this.state.things.length} thing(s) to do.</h4>
+            <h4 class="subtitle ">You have {this.state.things.length} thing(s) to do.</h4>
 						
 						<form onSubmit={this.handleSubmit}>
-							<input placeholder="Input here" class="input is-rounded is-small" type='text' onChange={this.handleChange}/>
-							<input class="button is-success is-rounded is-small" type='submit'/>
+							<input type='text' placeholder="Input here" class="input is-rounded is-small" onChange={this.handleChange} onSubmit={this.handleSubmit}/>
+							<input type='submit' class="button is-success is-rounded is-small" />
 						</form>
 										
             <PUKIMAK things={this.state.things} onDelete={this.handleDelete}/>
